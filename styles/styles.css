@@ -1,0 +1,262 @@
+/* --- DESIGN SYSTEM CONFIGURATION --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght=500;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-dark-blue: #0B173B;     /* Primary background color */
+    --accent-neon: #7DEEFF;      /* Bright neon accent blue */
+    --accent-light: #9FE6FE;     /* Light soft blue */
+    --muted-gray: #555555;       /* Muted text/borders */
+    --text-light: #FFFFFF;       /* White text */
+    
+    --font-header: 'Orbitron', 'Helvetica Neue', sans-serif;
+    --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark-blue);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Generous spacing between section panels */
+}
+
+/* --- Typography & Tech Glows --- */
+h1, h2, h3, h4 {
+    font-family: var(--font-header);
+    letter-spacing: 2px;
+    color: var(--accent-neon);
+    text-shadow: 0 0 10px rgba(125, 238, 255, 0.6); /* Creates the terminal neon look */
+}
+
+.tag-accent {
+    font-size: 0.9rem;
+    color: var(--accent-light);
+    font-family: var(--font-body);
+    vertical-align: middle;
+    margin-left: 10px;
+    text-shadow: none;
+}
+
+a {
+    color: var(--accent-neon);
+    text-decoration: underline;
+}
+
+p {
+    padding: 0; /* Clear explicit paragraph padding conflicts */
+    margin-bottom: 15px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Header & Centered Logo System --- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px 20px;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo-area img {
+    width: 150px; /* Constrains header profile/logo image precisely */
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--accent-neon);
+    margin-bottom: 15px;
+}
+
+.logo-area h1 {
+    font-size: 2.6rem;
+    color: var(--text-light);
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(125, 238, 255, 0.5);
+}
+
+.subtitle {
+    font-family: var(--font-header);
+    color: var(--accent-light);
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+/* --- Navigation Link Track --- */
+nav {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(11, 23, 59, 0.5);
+    padding: 10px 20px;
+    border: 1px solid rgba(125, 238, 255, 0.2);
+    border-radius: 4px;
+}
+
+nav a {
+    font-family: var(--font-header);
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    background-color: rgba(125, 238, 255, 0.1);
+    border-color: var(--accent-light);
+    color: var(--accent-neon);
+}
+
+/* --- Outer Enclosing Blueprint Panels --- */
+.wireframe-container {
+    border: 1px solid var(--accent-neon); /* Matches clean blueprint schematic system */
+    padding: 25px;
+    background-color: rgba(11, 23, 59, 0.7); /* Slightly darker panels to offset elements */
+    box-shadow: 0 0 15px rgba(125, 238, 255, 0.1);
+    border-radius: 4px;
+}
+
+.wireframe-container h2 {
+    font-size: 1.3rem;
+    border-bottom: 1px dashed rgba(125, 238, 255, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Aside Layout Styling --- */
+.aside-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.aside-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 1px solid var(--accent-light);
+    box-shadow: 0 0 10px rgba(125, 238, 255, 0.2);
+}
+
+@media (min-width: 600px) {
+    .aside-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .aside-img {
+        width: 200px; /* Constrains aside image width per standard requirements */
+    }
+}
+
+/* --- Table Styles --- */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table, th, td {
+    border: 1px solid var(--accent-neon);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    font-family: var(--font-header);
+    color: var(--accent-neon);
+    font-size: 0.9rem;
+    background-color: rgba(125, 238, 255, 0.05);
+}
+
+td {
+    height: 40px;
+}
+
+/* --- Balanced Schematic Form Fields --- */
+.form-center {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--accent-light);
+}
+
+input[type="text"] {
+    background-color: transparent;
+    border: 1px solid var(--accent-neon);
+    padding: 10px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    border-radius: 4px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--accent-neon);
+}
+
+/* --- Footer Area --- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--accent-neon);
+    font-family: var(--font-header);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--accent-light);
+}

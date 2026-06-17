@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Favorite Devotionals</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-image">
+        <h1>My Favorite<br>Devotionals</h1>
+      </div>
+    </header>
+    <main>
+      <div class="content-box">
+        
+        <h2>Inspirational Messages</h2>
+        <p class="intro-text">Here is a collection of powerful devotionals delivered at BYU-Idaho that have left a lasting impact.</p>
+        
+        <table class="devo-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Speaker</th>
+              <th>Location</th> <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Feb 2026</td>
+              <td>President Dallin H. Oaks</td>
+              <td>Marriot Center</td> <td>Coming Closer to Jesus Christ</td>
+            </tr>
+            <tr>
+              <td>Jan 2022</td>
+              <td>Brother John Reed</td>
+              <td>I-Center</td> <td>Using The Book of Mormon in Our Lives</td>
+            </tr>
+            <tr>
+              <td>Feb 2026</td>
+              <td>Elder Neil L. Andersen</td>
+              <td>I-Center</td> <td>President Dallin H. Oaks and the Law of Witnesses</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr class="section-divider">
+
+        <h2>Share Your Favorite Devotional</h2>
+        <p class="intro-text">Have a devotional that inspired you? Fill out the form below to submit it to our list.</p>
+        
+        <form action="#" method="post" class="devo-form">
+          <div class="form-group">
+            <label for="speaker-name">Speaker Name:</label>
+            <input type="text" id="speaker-name" name="speakerName" placeholder="e.g., Elder Holland" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="devo-title">Devotional Title:</label>
+            <input type="text" id="devo-title" name="devoTitle" placeholder="e.g., Cast Not Away Therefore Your Confidence" required>
+          </div>
+
+          <div class="form-group">
+            <label for="devo-location">Location Delivered:</label>
+            <input type="text" id="devo-location" name="devoLocation" placeholder="e.g., I-Center or Hinckley Chapel">
+          </div>
+
+          <div class="form-group">
+            <label for="devo-date">Date Delivered:</label>
+            <input type="date" id="devo-date" name="devoDate">
+          </div>
+
+          <div class="form-group">
+            <label for="impact">Why did this message inspire you?</label>
+            <textarea id="impact" name="impactMessage" rows="4" placeholder="Share your thoughts..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Devotional</button>
+        </form>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

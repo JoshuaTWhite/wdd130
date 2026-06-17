@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostles Spotlights</title>
+    <style>
+        /* Insert styles here */
+        body {
+            background-color: #E8ECED;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #board {
+            border: solid #000000 12px;
+            border-radius: 35px;
+            width: 950px;
+            max-width: 100%;
+            min-height: 650px;
+
+            background-image: url('images/christus.webp'), url('images/space-bg.jpg');
+            background-position: left bottom, center center;
+            background-size: auto 100%, cover;
+            background-repeat: no-repeat, no-repeat;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            position: relative;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .statue-container {
+            display: flex;
+            align-items: flex-end; /* Aligns the statue base with the bottom border */
+            justify-content: flex-start;
+        }
+
+        .statue-container img {
+            height: 110%; /* Makes the statue slightly pop out/fill taller than the container */
+            width: auto;
+            object-fit: contain;
+            margin-bottom: -10px;
+        }
+
+        /* Right Column: Text Headings and Photo Layouts */
+        .content-container {
+            grid-column: 2; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 40px 30px 0; /* Extra right padding to frame nicely */
+        }
+
+        h1, h2 {
+            color: #FFFFFE;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: normal;
+            margin: 0;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .spotlight {
+            border: #ffffff 4px solid; /* Clean white ring border */
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spotlight img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* First Presidency Row Arrangement (Flexbox) */
+        .presidency-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between the three leaders */
+            margin-bottom: 10px;
+        }
+
+        /* Circular framing size tiers */
+        .spotlight.prophet {
+            width: 120px;
+            height: 120px;
+            order: 2; /* Forces President Oaks to sit cleanly in the center */
+        }
+
+        .spotlight.first_pres {
+            width: 100px;
+            height: 100px;
+        }
+        .first_pres.left-counselor { order: 1; }
+        .first_pres.right-counselor { order: 3; }
+
+        /* Quorum of the 12 Grid Layout (CSS Grid) */
+        .twelve-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 85px); /* 4 columns */
+            grid-gap: 15px 25px; /* Adjust row gap and column gap */
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .spotlight.quorum-member {
+            width: 85px;
+            height: 85px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Insert HTML elements here -->
+
+    <div id="board">
+
+        <div class="content-container">
+            
+            <h1>First Presidency</h1>
+            
+            <div class="presidency-row">
+                <div class="spotlight prophet">
+                    <img src="images/oaks.webp" alt="President Oaks">
+                </div>
+                <div class="spotlight first_pres left-counselor">
+                    <img src="images/eyring.webp" alt="President Eyring">
+                </div>
+                <div class="spotlight first_pres right-counselor">
+                    <img src="images/christofferson.webp" alt="President Christofferson">
+                </div>
+            </div>
+
+            <h2>Quorum of the Twelve Apostles</h2>
+
+            <div class="twelve-grid">
+                <div class="spotlight quorum-member"><img src="images/uchtdorf.webp" alt="Elder Uchtdorf"></div>
+                <div class="spotlight quorum-member"><img src="images/bednar.webp" alt="Elder Bednar"></div>
+                <div class="spotlight quorum-member"><img src="images/cook.webp" alt="Elder Cook"></div>
+                <div class="spotlight quorum-member"><img src="images/anderson.webp" alt="Elder Anderson"></div>
+                
+                <div class="spotlight quorum-member"><img src="images/rasband.webp" alt="Elder Rasband"></div>
+                <div class="spotlight quorum-member"><img src="images/stevenson.webp" alt="Elder Stevenson"></div>
+                <div class="spotlight quorum-member"><img src="images/renlund.webp" alt="Elder Renlund"></div>
+                <div class="spotlight quorum-member"><img src="images/gong.webp" alt="Elder Gong"></div>
+                
+                <div class="spotlight quorum-member"><img src="images/soares.webp" alt="Elder Soares"></div>
+                <div class="spotlight quorum-member"><img src="images/kearon.webp" alt="Elder Kearon"></div>
+                <div class="spotlight quorum-member"><img src="images/causse.webp" alt="Bishop Causse"></div>
+                <div class="spotlight quorum-member"><img src="images/gilbert.webp" alt="Elder Gilbert"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

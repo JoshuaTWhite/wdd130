@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Colors */
+  --primary-color: #03045E;
+  --secondary-color: #0096C7;
+  --accent1-color: #023E8A;
+  --accent2-color: #CAF0F8;
+
+  /* Fonts */
+  --heading-font: "IM Fell French Canon", serif;
+  --paragraph-font: "Lato", sans-serif;
+
+  /* UI Colors */
+  --nav-link-color: #EFF1ED;
+  --nav-background-color: #023E8A;
+  --nav-hover-link-color: #03045E;
+  --nav-hover-background-color: #CAF0F8;
+}
+
+/* Global Styles */
+body {
+    background-color: #fcfcfc;
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Global Navigation Styles */
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 1em;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+/* Logo and Global Header Items */
+#logo_link img {
+  width: 100px;
+}
+
+.icon {
+  width: 80px;
+  padding-top: 10px;
+}
+
+/* Global Image Styling */
+img {
+  max-width: 100%;
+}
+
+/* Reusable Classes */
+.book, .join {
+  background-color: var(--secondary-color);
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.book:hover, .join:hover {
+  background-color: var(--accent2-color);
+  color: var(--primary-color);
+}
+
+/* Site Plan specific table styling */
+.colors {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.colors td {
+  height: 50px;
+}
+
+.primary { background-color: var(--primary-color); }
+.secondary { background-color: var(--secondary-color); }
+.accent1 { background-color: var(--accent1-color); }
+.accent2 { background-color: var(--accent2-color); }

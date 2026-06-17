@@ -1,0 +1,87 @@
+/* General Layout & Fonts */
+body {
+    /* Faint Southern Gingham/Plaid */
+    background-color: #fdfaf5; 
+    background-image: 
+        linear-gradient(90deg, rgba(193, 154, 107, 0.05) 50%, transparent 50%),
+        linear-gradient(rgba(193, 154, 107, 0.05) 50%, transparent 50%);
+    background-size: 40px 40px;
+    
+    color: #2f3e36;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+#wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    
+    /* Light Wood/Tree Bark Tone */
+    background-color: #dfd5c6; /* Weathered Cedar / Light Oak tone */
+    
+    /* Heavy Trail-Sign Borders */
+    border: 8px solid #3d2b1f; /* Deep Earth Brown */
+    outline: 3px solid #2e4132; /* Deep Pine Green */
+    
+    /* Depth shadow */
+    box-shadow: 0 10px 25px rgba(26, 48, 34, 0.25); 
+    
+    padding: 40px;
+    
+    /* Subtle horizontal lines to mimic wood grain planks */
+    background-image: linear-gradient(rgba(61, 43, 31, 0.03) 1px, transparent 1px);
+    background-size: 100% 20px;
+}
+
+/* Header & Nav */
+header {
+    background-color: #5d4037; /* Warm Terracotta */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    color: #fff9c4; /* Soft "Porch Light" yellow */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Content Styling */
+h1, h2 {
+    color: #2e7d32; /* "Southern Sage" Green */
+    font-family: 'Times New Roman', serif;
+    text-transform: capitalize;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d7ccc8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #795548;
+    margin-top: 20px;
+}
